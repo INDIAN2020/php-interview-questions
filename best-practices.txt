@@ -1,0 +1,44 @@
+Use these functions in conjunction with proper coding practices:
+
+  1. Input Validation and Sanitization
+    🔴 filter_var(): Validates and sanitizes user input using predefined filters (e.g., email validation).
+    🟢 htmlspecialchars(): Escapes special HTML characters to prevent XSS attacks.
+    🟡 strip_tags(): Removes HTML and PHP tags from a string.
+    🟠 addslashes(): Escapes special characters in a string for use in SQL.
+    ⚪ mysqli_real_escape_string(): Escapes special characters in a string for MySQL queries.
+
+  2. Hashing and Encrypt Sensitive Data
+    🔴 password_hash(): Creates a secure password hash using bcrypt or Argon2.
+    🟢 password_verify(): Verifies that a password matches its hash.
+    🟡 hash(): Generates a hash using various algorithms (e.g., SHA256).
+    🟠 hash_hmac(): Generates a keyed hash value for message authentication.
+    ⚪ openssl_encrypt(): Encrypts data using OpenSSL algorithms.
+    🟣 openssl_decrypt(): Decrypts data encrypted by openssl_encrypt().
+    🔵 random_bytes(): Generates cryptographically secure random bytes.
+    🌐 random_int(): Generates cryptographically secure random integers.
+
+  3. Session and Cookies
+    🔴 session_start(): Starts a secure session.
+    🟢 session_regenerate_id(): Regenerates a session ID to prevent session fixation.
+    🟡 setcookie(): Sets secure cookies with options like HttpOnly and Secure.
+    🟠 session_set_cookie_params(): Configures session cookies to enhance security.
+
+  4. Error Handling
+    🔴 error_reporting(): Configures which PHP errors are reported.
+    🟢 ini_set(): Sets runtime configurations, such as disabling error display.
+
+  5. Filesystem Security
+    🔴 basename(): Strips directory paths to prevent directory traversal attacks.
+    🟢 realpath(): Resolves the absolute path to ensure secure file access.
+    🟡 chmod(): Changes file permissions to restrict access.
+
+  6. Network Security
+    🔴 openssl_pkey_new(): Generates a new private/public key pair.
+    🟢 openssl_sign(): Creates a digital signature for data.
+    🟡 openssl_verify(): Verifies a digital signature.
+
+  7. Miscellaneous
+    🔴 escapeShellArg(): Escapes a string to be safely used in a shell command.
+    🟢 escapeShellCmd(): Escapes a command string to prevent command injection.
+    🟡 is_uploaded_file(): Verifies if a file was uploaded via HTTP POST.
+    🟠 move_uploaded_file(): Safely moves uploaded files to a new location.
